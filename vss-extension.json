@@ -2,20 +2,37 @@
     "manifestVersion": 1,
     "id": "HockeyAppUWP",
     "name": "Publish UWP to HockeyApp",
-    "version": "1.0.5",
-    "publisher": "Vitaliy-Leschenko",
+    "version": "1.0.10",
+    "publisher": "Vitaliy-Leschenko-BY",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
     "description": "Tools for publish UWP apps to HockeyApp.",
+    "content": {
+        "details": {"path": "overview.md"},
+        "images/settings.png": {"path": "images/settings.png"},
+        "images/service-endpoint-hockeyapp.png": {"path": "images/service-endpoint-hockeyapp.png"}
+    },
     "categories": [
         "Build and release"
     ],
     "icons": {
-        "default": "icon.png"
+        "default": "images/hockeyapp-logo.png",
+        "large": "images/hockeyapp-logo-large.png"
     },
+    "screenshots": [
+         {
+             "path": "images/screen1.png"
+         },
+         {
+             "path": "images/screen2.png"
+         },
+         {
+             "path": "images/screen3.png"
+         }
+    ],
     "files": [
         {"path": "task"},
         {"path": "widget"}
