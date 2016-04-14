@@ -2,8 +2,9 @@
     "manifestVersion": 1,
     "id": "HockeyAppUWP",
     "name": "Publish UWP to HockeyApp",
-    "version": "1.0.10",
+    "version": "1.0.13",
     "publisher": "Vitaliy-Leschenko-BY",
+    "public": true,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
@@ -11,9 +12,7 @@
     ],    
     "description": "Tools for publish UWP apps to HockeyApp.",
     "content": {
-        "details": {"path": "overview.md"},
-        "images/settings.png": {"path": "images/settings.png"},
-        "images/service-endpoint-hockeyapp.png": {"path": "images/service-endpoint-hockeyapp.png"}
+        "details": {"path": "overview.md"}
     },
     "categories": [
         "Build and release"
@@ -35,7 +34,31 @@
     ],
     "files": [
         {"path": "task"},
-        {"path": "widget"}
+        {"path": "images/settings.png", "addressable": true},
+        {"path": "images/service-endpoint-hockeyapp.png", "addressable": true},
+        {"path": "widget/configuration.htm", "addressable": true},
+        {"path": "widget/widget.htm", "addressable": true},
+        {"path": "widget/css/configuration.css", "addressable": true},
+        {"path": "widget/css/widget.css", "addressable": true},
+
+        {"path": "widget/img/configurationRequired.png", "addressable": true},
+        {"path": "widget/img/crashReports.png", "addressable": true},
+        {"path": "widget/img/download.png", "addressable": true},
+        {"path": "widget/img/errorIcon.png", "addressable": true},
+        {"path": "widget/img/loading.png", "addressable": true},
+        {"path": "widget/img/logo.png", "addressable": true},
+        {"path": "widget/img/overview.png", "addressable": true},
+        {"path": "widget/img/preview.png", "addressable": true},
+
+        {"path": "widget/js/configuration.js", "addressable": true},
+        {"path": "widget/js/q.js", "addressable": true},
+        {"path": "widget/js/widget.js", "addressable": true},
+
+        {"path": "widget/sdk/scripts/VSS.SDK.js", "addressable": true}
+    ],
+    "scopes": [
+        "vso.build_execute",
+        "vso.serviceendpoint_manage"
     ],
     "contributions": [
         {
@@ -50,7 +73,7 @@
         },
         {
             "id": "hockeyapp-endpoint-type",
-            "description": "HockeyAppprovidesanalyticsformobileapp.",
+            "description": "HockeyApp provides analytics for mobile app.",
             "type": "ms.vss-endpoint.service-endpoint-type",
             "targets": [
                 "ms.vss-endpoint.endpoint-types"
